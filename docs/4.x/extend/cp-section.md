@@ -58,6 +58,10 @@ Your templates can specify which subnav item should be selected by setting a `se
 {% set selectedSubnavItem = 'bar' %}
 ```
 
+::: tip
+When creating a subnav, make sure the subnav URL is within the parent navs URL path (e.g. `parent-url` and `parent-url/foo`) and that the parent URL doesn't end with a trailing slash. Forgeting theese may lead to subnav items not appearing or being hightlighted when on a subnav page.
+:::
+
 ## Plugin Sections
 
 Plugins that only need to add one section can set the `$hasCpSection` property on their primary plugin class, rather than using the [EVENT_REGISTER_CP_NAV_ITEMS](craft4:craft\web\twig\variables\Cp::EVENT_REGISTER_CP_NAV_ITEMS) event:
